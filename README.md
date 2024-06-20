@@ -12,10 +12,10 @@ The objective of the Hangman game is to guess the hidden word one letter at a ti
 ```bash
 git clone https://github.com/yourusername/Hangman-Game.git
 
-Ensure you have Python installed:
+### Ensure you have Python installed:
 You can download it from python.org.
 
-Install the required libraries:
+## Install the required libraries:
 
 bash
 Copy code
@@ -29,7 +29,7 @@ python hangman.py
 Code Explanation
 The Hangman game is built using Python's Tkinter for the GUI and Pygame for the sound effects. Below is a detailed explanation of the code structure.
 
-Imports and Setup
+## Imports and Setup
 python
 Copy code
 import tkinter as tk
@@ -60,13 +60,13 @@ class HangmanGame:
         self.master.title("Hangman Game")
         self.master.geometry("900x700")
         self.master.configure(bg="#2C3E50")
-        
+
         self.words = ['python', 'programming', 'computer', 'science', 'algorithm']
         self.word = random.choice(self.words)
         self.word_letters = set(self.word)
         self.used_letters = set()
         self.lives = 6
-        
+
         self.setup_gui()
         self.setup_sound()
         self.reset_game()
@@ -79,24 +79,24 @@ def setup_gui(self):
     title_font = font.Font(family="Helvetica", size=36, weight="bold")
     title = tk.Label(self.master, text="Hangman", font=title_font, bg="#2C3E50", fg="#ECF0F1")
     title.pack(pady=20)
-    
+
     self.canvas = tk.Canvas(self.master, width=400, height=400, bg="#34495E", highlightthickness=0)
     self.canvas.pack(pady=20)
-    
+
     word_font = font.Font(family="Courier", size=24, weight="bold")
     self.word_display = tk.Label(self.master, text="", font=word_font, bg="#2C3E50", fg="#ECF0F1")
     self.word_display.pack(pady=20)
-    
+
     self.letter_frame = tk.Frame(self.master, bg="#2C3E50")
     self.letter_frame.pack(pady=20)
-    
+
     for char in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
         btn = tk.Button(self.letter_frame, text=char, width=4, height=2,
                         command=lambda x=char: self.guess_letter(x),
                         font=("Helvetica", 12, "bold"),
                         bg="#3498DB", fg="white", activebackground="#2980B9")
         btn.pack(side=tk.LEFT, padx=2, pady=2)
-    
+
     self.message_label = tk.Label(self.master, text="", font=("Helvetica", 18), bg="#2C3E50", fg="#ECF0F1")
     self.message_label.pack(pady=20)
 The setup_gui method creates the game interface, including the title, canvas for drawing, word display, letter buttons, and message label.
@@ -174,7 +174,7 @@ def draw_left_leg(self):
     self.canvas.create_line(275, 250, 225, 300, width=3, fill="#ECF0F1")
 
 def draw_right_leg(self):
-    self.canvas.create_line(275, 250, 325, 300, width=3, fill="#ECF0F1")
+    self.canvas.create_line(275, 250, 325, 300, width=3, fill="#ECF0F1)
 These methods handle drawing the gallows and hangman parts on the canvas.
 
 Guessing Letters
@@ -222,4 +222,4 @@ game = HangmanGame(root)
 root.mainloop()
 These lines create the main application window and start the game loop.
 
-# This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the game, as well as detailed notes on the code.
+This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the
