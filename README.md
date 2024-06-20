@@ -1,17 +1,17 @@
-Here is an improved version of your README with better formatting and organization:
+# Hangman Game
 
-Hangman Game
-Python-based Hangman Game Project
+## Python-based Hangman Game Project
 
-How to Play
+### How to Play
+
 The objective of the Hangman game is to guess the hidden word one letter at a time. You start with 6 lives. Each incorrect guess results in losing a life and drawing a part of the hangman. If you guess the word before your lives run out, you win. If you run out of lives, the game is over, and the word is revealed.
 
-Installation and Setup
-Clone the repository:
+### Installation and Setup
 
-bash
-Copy code
+**Clone the repository:**
+```bash
 git clone https://github.com/yourusername/Hangman-Game.git
+
 Ensure you have Python installed:
 You can download it from python.org.
 
