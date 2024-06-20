@@ -1,6 +1,6 @@
 Here is an improved version of your README with better formatting and organization:
 
-#Hangman Game
+Hangman Game
 Python-based Hangman Game Project
 
 How to Play
