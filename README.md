@@ -222,4 +222,4 @@ game = HangmanGame(root)
 root.mainloop()
 These lines create the main application window and start the game loop.
 
-This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the game, as well as detailed notes on the code.
+# This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the game, as well as detailed notes on the code.
