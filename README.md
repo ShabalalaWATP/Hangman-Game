@@ -1,5 +1,9 @@
 # Hangman Game
 
+by 
+
+Alex Orr
+
 # Python-based Hangman Game Project
 
 ### How to Play
