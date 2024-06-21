@@ -6,20 +6,21 @@
 
 The objective of the Hangman game is to guess the hidden word one letter at a time. You start with 6 lives. Each incorrect guess results in losing a life and drawing a part of the hangman. If you guess the word before your lives run out, you win. If you run out of lives, the game is over, and the word is revealed.
 
-### Installation and Setup
+## Installation and Setup
 
-**Clone the repository:**
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/ShabalalaWATP/Hangman-Game.git
-Ensure you have Python installed:
-You can download it from python.org.
 ```
+**2. Ensure you have Python installed:**
+You can download it from python.org.
 
-**Install the required libraries:**
+
+**3. Install the required libraries:**
 ```bash
 pip install pygame
 ```
-### Running the Game
+## Running the Game
 
 Navigate to the directory where the game files are located and run the following command:
 
@@ -27,7 +28,7 @@ Navigate to the directory where the game files are located and run the following
 python hangman.py
 ```
 
-### Code Explanation
+## Code Explanation
 
 The Hangman game is built using Python's Tkinter for the GUI and Pygame for the sound effects. Below is a detailed explanation of the code structure.
 
