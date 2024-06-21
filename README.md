@@ -1,14 +1,12 @@
 # Hangman Game
 
-by 
-
-Alex Orr
+### Created by Alex Orr
 
 # Python-based Hangman Game Project
 
 ### How to Play
 
-The objective of the Hangman game is to guess the hidden word one letter at a time. You start with 6 lives. Each incorrect guess results in losing a life and drawing a part of the hangman. If you guess the word before your lives run out, you win. If you run out of lives, the game is over, and the word is revealed.
+The objective of the Hangman game is to guess the hidden word one letter at a time. You start with 6 lives. Each incorrect guess results in losing a life and drawing a part of the hangman. If you guess the word before your lives run out, you win. If you run out of lives, the game is over, and the word is revealed. It features sound effects including medieval background music, crowd cheering for correct answers, crowd booing for incorrect answers and a hanging sound for losing the game.
 
 ![Hangman Game Screenshot](Hangman_Game.png)
 
