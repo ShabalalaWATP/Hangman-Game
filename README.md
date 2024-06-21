@@ -1,6 +1,6 @@
 # Hangman Game
 
-## Python-based Hangman Game Project
+# Python-based Hangman Game Project
 
 ### How to Play
 
