@@ -10,7 +10,7 @@ The objective of the Hangman game is to guess the hidden word one letter at a ti
 
 **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/Hangman-Game.git
+git clone https://github.com/ShabalalaWATP/Hangman-Game.git
 Ensure you have Python installed:
 You can download it from python.org.
 ```
