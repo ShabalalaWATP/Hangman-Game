@@ -5,7 +5,8 @@
 ### How to Play
 
 The objective of the Hangman game is to guess the hidden word one letter at a time. You start with 6 lives. Each incorrect guess results in losing a life and drawing a part of the hangman. If you guess the word before your lives run out, you win. If you run out of lives, the game is over, and the word is revealed.
-![Hangman Game Screenshot](assets/Hangman_Game.png)
+
+![Hangman Game Screenshot](Hangman_Game.png)
 
 ## Installation and Setup
 
