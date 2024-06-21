@@ -11,49 +11,52 @@ The objective of the Hangman game is to guess the hidden word one letter at a ti
 **Clone the repository:**
 ```bash
 git clone https://github.com/yourusername/Hangman-Game.git
-
-### Ensure you have Python installed:
+Ensure you have Python installed:
 You can download it from python.org.
+```
 
-## Install the required libraries:
-
-bash
-Copy code
+**Install the required libraries:**
+```bash
 pip install pygame
-Running the Game
+```
+### Running the Game
+
 Navigate to the directory where the game files are located and run the following command:
 
-bash
-Copy code
+```bash
 python hangman.py
-Code Explanation
+```
+
+### Code Explanation
+
 The Hangman game is built using Python's Tkinter for the GUI and Pygame for the sound effects. Below is a detailed explanation of the code structure.
 
-## Imports and Setup
-python
-Copy code
+**Imports and Setup**
+```python
 import tkinter as tk
 from tkinter import messagebox, font
 import random
 import pygame
 import os
+```
 These lines import the necessary libraries for the GUI (tkinter), random word selection (random), sound effects (pygame), and file path handling (os).
 
-File Path Helper Function
-python
-Copy code
+**File Path Helper Function**
+```python
 script_dir = r"C:\Users\alexo\OneDrive\Documents\GitHub\Python Hangman"
 
 def get_path(filename):
     return os.path.join(script_dir, filename)
+```
 This function helps in constructing the correct file paths for the sound files.
 
-HangmanGame Class
+**HangmanGame Class**
+
 The HangmanGame class contains all the logic for the game.
 
-Initialization
-python
-Copy code
+**Initialization**
+
+```python
 class HangmanGame:
     def __init__(self, master):
         self.master = master
@@ -70,11 +73,11 @@ class HangmanGame:
         self.setup_gui()
         self.setup_sound()
         self.reset_game()
+```
 The constructor initializes the game, sets up the GUI and sound, and resets the game state.
 
-GUI Setup
-python
-Copy code
+**GUI Setup**
+```python
 def setup_gui(self):
     title_font = font.Font(family="Helvetica", size=36, weight="bold")
     title = tk.Label(self.master, text="Hangman", font=title_font, bg="#2C3E50", fg="#ECF0F1")
@@ -99,11 +102,11 @@ def setup_gui(self):
 
     self.message_label = tk.Label(self.master, text="", font=("Helvetica", 18), bg="#2C3E50", fg="#ECF0F1")
     self.message_label.pack(pady=20)
+```
 The setup_gui method creates the game interface, including the title, canvas for drawing, word display, letter buttons, and message label.
 
-Sound Setup
-python
-Copy code
+**Sound Setup**
+```python
 def setup_sound(self):
     pygame.mixer.init()
     self.correct_sound = pygame.mixer.Sound(get_path("correct.wav"))
@@ -112,11 +115,11 @@ def setup_sound(self):
     pygame.mixer.music.load(get_path("background.mp3"))
     pygame.mixer.music.set_volume(0.3)
     pygame.mixer.music.play(-1)
+```
 The setup_sound method initializes the sound effects and background music using Pygame.
 
-Game Reset
-python
-Copy code
+**Game Reset**
+```python
 def reset_game(self):
     self.word = random.choice(self.words)
     self.word_letters = set(self.word)
@@ -126,19 +129,18 @@ def reset_game(self):
     self.draw_gallows()
     self.update_word_display()
     self.message_label.config(text="")
+```
 The reset_game method resets the game state, chooses a new word, and updates the display.
 
-Update Word Display
-python
-Copy code
+**Update Word Display**
+```python
 def update_word_display(self):
     display = ' '.join([letter if letter in self.used_letters else "_" for letter in self.word])
     self.word_display.config(text=display)
 The update_word_display method updates the displayed word with guessed letters and underscores.
-
-Drawing Functions
-python
-Copy code
+```
+**Drawing Functions**
+```python
 def draw_hangman(self):
     stages = [
         self.draw_head,
@@ -175,11 +177,11 @@ def draw_left_leg(self):
 
 def draw_right_leg(self):
     self.canvas.create_line(275, 250, 325, 300, width=3, fill="#ECF0F1)
+```
 These methods handle drawing the gallows and hangman parts on the canvas.
 
-Guessing Letters
-python
-Copy code
+**Guessing Letters**
+```python
 def guess_letter(self, letter):
     if self.lives <= 0:
         return
@@ -212,14 +214,21 @@ def guess_letter(self, letter):
         self.message_label.config(text="Congratulations! You won!", fg="#2ECC71")
         self.master.after(2000, lambda: messagebox.showinfo("Congratulations", "You won!"))
         self.master.after(2000, self.reset_game)
+```
 The guess_letter method handles the logic for guessing letters, updating the game state, and playing sound effects.
 
-Main Loop
-python
-Copy code
+**Main Loop**
+```python
 root = tk.Tk()
 game = HangmanGame(root)
 root.mainloop()
+```
 These lines create the main application window and start the game loop.
 
-This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the
+## This README provides a comprehensive overview of the Hangman game, including instructions on how to play, install, and run the game, as well as detailed notes on the code.
+
+
+
+
+
+
